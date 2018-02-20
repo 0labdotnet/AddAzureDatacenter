@@ -1,11 +1,10 @@
 #Requires -Version 3.0
 
 Param(
-    [string] [Parameter(Mandatory=$true)] $ResourceGroupLocation,
     [string] [Parameter(Mandatory=$true)] $ResourceGroupName,
-    [string] $TemplateFile = 'vnetdeploy.json',
-    [string] $TemplateParametersFile = 'vnetdeploy.parameters.json',
-    [switch] $ValidateOnly
+    [string] $TemplateFile = 'azuredeploy.json',
+    [string] $TemplateParametersFile = 'azuredeploy.parameters.json',
+    [switch] $ValidateOnly = $false
 )
 
 Login-AzureRmAccount -Credential (Get-Credential -Message "hello. Please to providing Azure secrets")
@@ -21,9 +20,6 @@ function Format-ValidationOutput {
 
 $TemplateFile = [System.IO.Path]::GetFullPath([System.IO.Path]::Combine($PSScriptRoot, $TemplateFile))
 $TemplateParametersFile = [System.IO.Path]::GetFullPath([System.IO.Path]::Combine($PSScriptRoot, $TemplateParametersFile))
-
-# Create or update the resource group using the specified template file and template parameters file
-New-AzureRmResourceGroup -Name $ResourceGroupName -Location $ResourceGroupLocation -Verbose -Force
 
 if ($ValidateOnly) {
     $ErrorMessages = Format-ValidationOutput (Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName `

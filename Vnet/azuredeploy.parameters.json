@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "subnetName": {
+      "value": "0lab-corp-usw-10.200.1"
+    },
+    "subnetPrefix": {
+      "value": "10.200.1.0/24"
+    },
+    "vnetAddressPrefix": {
+      "value": "10.200.0.0/16"
+    },
+    "vnetName": {
+      "value": "0lab-corp-usw-vnet"
+    }
+  }
+}

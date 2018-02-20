@@ -11,5 +11,5 @@ Param(
 	#[string] [Parameter(Mandatory=$true)] $Subscription
 )
 
-Login-AzureRmAccount -Credential (Get-Credential -Message "hello. Please to providing secrets")
+Login-AzureRmAccount -Credential (Get-Credential -Message "hello. Please to providing of secrets .")
 New-AzureRmResourceGroup -Name $ResourceGroupName -Location $ResourceGroupLocation -Verbose -Force
