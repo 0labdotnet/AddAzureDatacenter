@@ -3,16 +3,46 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "subnetName": {
-      "value": "0lab-corp-usw-10.200.1"
+      "value": "0lab-corp-usc-10.30.100"
     },
     "subnetPrefix": {
-      "value": "10.200.1.0/24"
+      "value": "10.30.100.0/24"
     },
     "vnetAddressPrefix": {
-      "value": "10.200.0.0/16"
+      "value": "10.30.0.0/16"
     },
     "vnetName": {
-      "value": "0lab-corp-usw-vnet"
+      "value": "0lab-corp-usc-vnet"
+    },
+    "vpnType": {
+      "value": "RouteBased"
+    },
+    "localGatewayName": {
+      "value": "0lab-corp-home"
+    },
+    "localGatewayIpAddress": {
+      "value": "24.5.254.158"
+    },
+    "localAddressPrefix": {
+      "value": "10.10.100.0/24"
+    },
+    "gatewaySubnetPrefix": {
+      "value": "10.30.254.0/24"
+    },
+    "gatewayPublicIPName": {
+      "value": "0lab-corp-gateway-IP"
+    },
+    "gatewayName": {
+      "value": "0lab-corp-gateway"
+    },
+    "gatewaySku": {
+      "value": "Basic"
+    },
+    "connectionName": {
+      "value": "0lab-corp-azure2home"
+    },
+    "sharedKey": {
+      "value": "}R@]d3w!SI7o_^9>?FpJrUt7CWP}@F&)4LVyVKY0%!QiaYMlAi"
     }
   }
 }
